@@ -23,7 +23,10 @@ class ProfileList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
+        # who is following a profile
         'owner__following__followed__profile'
+        # which profiles someone is following
+        'owner__followed__owner__profile'
     ]
     ordering_fields = [
         'posts_count',
