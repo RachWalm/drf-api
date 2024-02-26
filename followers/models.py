@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Follower(models.Model):
+class followers(models.Model):
     """
     Followers - where a user follows another user
     """
